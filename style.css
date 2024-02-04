@@ -73,7 +73,6 @@ font-size: 14px;
 font-weight: 600;
 color: #fff;
 cursor: pointer;
-margin: 16px;
 height: 43px;
 text-align:center;
 border: none;
@@ -146,6 +145,12 @@ box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
       #4e4376
     );
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    }
+    .buttons{
+        display:flex;
+        margin-top: 180px;
+        margin-left: 100px;
+        gap:12px;
     }
 
     /* thumbnail */
@@ -250,7 +255,7 @@ box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 /* effect on next click */
 .carsoul.next .list .items:nth-child(1) img{
-    width:150px;
+    width:180px;
     height:220px;
     position:absolute;
     left:50%;
@@ -274,11 +279,11 @@ box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 @keyframes showThumbnail{
     to{
-        width:150px;
+        width:180px;
     }
 }
 
-.carsoul.next .thumbnail{
+.carsoul.next  .thumbnail{
     transform: translateX(150px);
     animation: transformThumbnail .5s linear 1 forwards;
 }
@@ -300,8 +305,8 @@ box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 @keyframes outImage {
     to{
-        width:150px;
-        height:220px;
+        width:180px;
+        height:100vh;
         border-radius: 20px;
         left:50%;
         bottom:50px;
@@ -328,3 +333,25 @@ box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 
         }
       }
+
+.carsoul.next .arrow button,
+.carsoul.prev .arrow button{
+    pointer-events: none;
+}
+/* TIME */
+.time{
+    width:0%;
+    height:5px;
+    background-color:#f1683a;
+    position: absolute;
+    z-index: 100;
+    top:0;
+    left:0;
+}
+
+.carsoul.next .time,
+.carsoul.prev .time{
+    to{
+        width:0;
+    }
+}
